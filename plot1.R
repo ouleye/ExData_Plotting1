@@ -2,7 +2,8 @@ Sys.setlocale("LC_TIME", "English")
 
 ###WARNINGS##
 ## The file household_power_consumption.txt must be in the working directory (unzipped)##
-if(!file.exists("./household_power_consumption.txt")) { print("'household_power_consumption.txt' is not in the working directory"); break}
+if(!file.exists("./household_power_consumption.txt")) 
+        { print("'household_power_consumption.txt' is not in the working directory"); break}
 
 # Load the data for 01/02/2007 and 02/02/2007.
 DATA <- read.table(text = grep("^[1,2]/2/2007", readLines("household_power_consumption.txt"), value = TRUE),
