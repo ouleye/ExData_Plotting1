@@ -26,3 +26,5 @@ with(DATA,points(Date,Sub_metering_3, col="blue", type="l"))
 legend("topright", col = c('black','red','blue'), legend = c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),
                    lty=c(1,1) )
 dev.off()
+
+
