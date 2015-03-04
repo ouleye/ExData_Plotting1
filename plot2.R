@@ -1,9 +1,11 @@
 Sys.setlocale("LC_TIME", "English")
 
-###WARNINGS##
-## The file household_power_consumption.txt must be in the working directory (unzipped)##
+## if the file is not in the working directory, it is donwloaded and unzipped##
 if(!file.exists("./household_power_consumption.txt")) 
-         { print("'household_power_consumption.txt' is not in the working directory"); break}
+        { download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip",
+                                destfile = "household_power_consumption.zip")
+          unzip("./household_power_consumption.zip")
+        }
 
 # Load the data for 01/02/2007 and 02/02/2007.
 DATA <- read.table(text = grep("^[1,2]/2/2007", readLines("household_power_consumption.txt"), value = TRUE),
