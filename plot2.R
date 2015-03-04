@@ -22,3 +22,5 @@ Sys.setlocale("LC_TIME", "English")
 png("plot2.png",width = 480, height = 480)
 with(DATA,plot(Date,Global_active_power, ylab = 'Global Active Power (kilowatts)',type='l',xlab=''))
 dev.off()
+
+
