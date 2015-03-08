@@ -27,13 +27,13 @@ par (mfrow = c(2,2), mar= c(4,4,2,2))
 #I notice that the plot2 and plot3 are to be displayed in this graph, I will  not use the plot2.R and Plot3.R
 # in this script, because there are slight difference in the dispay ( differents label, no box around legend.)
 
-#Add the up_left plot
+#Add the top_left plot
 with(DATA,plot(Date,Global_active_power, ylab = 'Global Active Power',type='l',xlab=''))
 
-#Add the up_righ plot
+#Add the top_righ plot
 with(DATA,plot(Date,Voltage, ylab = 'Voltage',type='l',xlab = 'datetime'))
 
-#Add the down_left plot
+#Add the bottom_left plot
 with(DATA,plot(Date,Sub_metering_1, ylab = 'Energy sub metering',type='n',xlab=''))
 with(DATA,points(Date,Sub_metering_1, col="black", type="l"))
 with(DATA,points(Date,Sub_metering_2, col="red", type="l"))
@@ -41,7 +41,7 @@ with(DATA,points(Date,Sub_metering_3, col="blue", type="l"))
 legend("topright", col = c('black','red','blue'), legend = c('Sub_metering_1','Sub_metering_2','Sub_metering_3')
            ,lty=c(1,1),bty="n" )
 
-#Add the down_right plot
+#Add the bottom_right plot
 with(DATA,plot(Date,Global_reactive_power,type='l',xlab = 'datetime'))
 
 dev.off()
